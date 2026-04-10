@@ -1,0 +1,157 @@
+/* Import Google Font Poppins agar tampilan profesional */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigasi (Soal No. 1) */
+header {
+    background: #d35400; /* Warna Oranye Khas Bazaar */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 span {
+    background: #fff;
+    color: #d35400;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2c3e50;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 10%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d35400;
+    font-weight: 700;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #d35400;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* SOAL NO. 2: Flexbox Layout & Media Query */
+.booth-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.booth-card {
+    background: white;
+    padding: 30px;
+    flex: 1;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.booth-card:hover {
+    transform: translateY(-10px);
+    border-color: #d35400;
+}
+
+.booth-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #27ae60; /* Warna hijau untuk harga */
+    margin-top: 20px;
+}
+
+/* Media Query untuk Tablet/Mobile (Breakpoint 768px) */
+@media (max-width: 768px) {
+    .booth-container {
+        flex-direction: column; /* Kartu jadi vertikal di HP */
+    }
+    section {
+        padding: 40px 5%;
+    }
+}
+
+/* SOAL NO. 3: Form Styling */
+.form-wrapper {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: #d

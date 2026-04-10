@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazaar Fest 2026 - Pendaftaran Tenant</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bazaar<span>Fest</span> 2026</h1>
+        <nav>
+            <ul>
+                <li><a href="#paket">Paket Booth</a></li>
+                <li><a href="#registrasi">Jadi Tenant</a></li>
+                <li><a href="#list-tenant">Daftar Tenant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="paket">
+            <h2>Pilihan Paket Booth</h2>
+            <div class="booth-container">
+                <div class="booth-card">
+                    <h3>Reguler</h3>
+                    <p>Ukuran 2x2m, Meja 1, Listrik 450W.</p>
+                    <div class="price">Rp 500.000</div>
+                </div>
+                <div class="booth-card">
+                    <h3>Premium</h3>
+                    <p>Ukuran 3x3m, Meja 2, Listrik 900W.</p>
+                    <div class="price">Rp 1.200.000</div>
+                </div>
+                <div class="booth-card">
+                    <h3>VIP Corner</h3>
+                    <p>Ukuran 4x4m, Tenda Khusus, Listrik 1300W.</p>
+                    <div class="price">Rp 2.500.000</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="registrasi">
+            <div class="form-wrapper">
+                <h2>Formulir Pendaftaran Tenant</h2>
+                <form id="bazaarForm">
+                    <div class="form-group">
+                        <label>Nama Brand:</label>
+                        <input type="text" id="brandName" placeholder="Contoh: Ayam Bakar Pak Eko" required>
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Pemilik:</label>
+                        <input type="email" id="ownerEmail" placeholder="nama@email.com" required>
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Target Penjualan (Angka Positif):</label>
+                        <input type="number" id="targetSales" placeholder="Contoh: 100" required>
+                        <span class="error" id="salesError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kategori Menu:</label>
+                        <select id="menuCat">
+                            <option value="makanan">Makanan</option>
+                            <option value="minuman">Minuman</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sertifikasi Halal:</label><br>
+                        <input type="radio" name="halal" value="ada" checked> Ada
+                        <input type="radio" name="halal" value="proses"> Proses
+                    </div>
+
+                    <button type="submit" class="btn-submit">Daftar Sekarang</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="list-tenant">
+            <h2>Tenant Terverifikasi</h2>
+            <div class="add-control">
+                <input type="text" id="newTenant" placeholder="Tambah Nama Brand Baru...">
+                <button onclick="tambahTenant()">Tambah</button>
+            </div>
+            <ul id="tenantList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bazaar Fest Organizer | syabil munthe</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
